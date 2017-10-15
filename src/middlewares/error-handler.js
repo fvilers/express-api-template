@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('api:server');
+const debug = require('debug');
 
 function errorHandler() {
   return process.env.NODE_ENV === 'production' ? errorHandler : debugErrorHandler;
@@ -14,7 +14,7 @@ function errorHandler() {
   }
 
   function debugErrorHandler(err, req, res, next) {
-    debug(err);
+    debug(req.app.locals.namespace)(err);
 
     if (res.headersSent) {
       return next(err);

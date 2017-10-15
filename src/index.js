@@ -8,7 +8,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const { errorHandler } = require('./middlewares');
 const configuration = require('./configuration');
+
 const app = express();
+app.locals.namespace = configuration.debug;
 
 app.use(cors(configuration.cors));
 app.use(compression());
