@@ -1,10 +1,13 @@
 'use strict';
 
 const express = require('express');
+const cors = require('cors');
 const compression = require('compression');
 const helmet = require('helmet');
+const configuration = require('./configuration');
 const app = express();
 
+app.use(cors(configuration.cors));
 app.use(compression());
 app.use(helmet());
 app.use('*', (req, res) => res.sendStatus(404));
