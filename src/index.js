@@ -6,7 +6,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const { debugErrorHandler, errorHandler } = require('./middlewares');
+const { errorHandler } = require('./middlewares');
 const configuration = require('./configuration');
 const app = express();
 
