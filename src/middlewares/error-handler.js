@@ -14,11 +14,12 @@ function errorHandler() {
   }
 
   function debugErrorHandler(err, req, res, next) {
+    debug(err);
+
     if (res.headersSent) {
       return next(err);
     }
 
-    debug(err);
     res.status(err.status || 500).send(err);
   }
 }
