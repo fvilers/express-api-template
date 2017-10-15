@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/fvilers/express-api-template#readme",
   "dependencies": {
+    "compression": "1.7.1",
     "debug": "3.1.0",
     "express": "4.16.2"
   },
