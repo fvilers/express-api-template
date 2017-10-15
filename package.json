@@ -1,0 +1,20 @@
+{
+  "name": "express-api-template",
+  "version": "0.0.0",
+  "description": "An opiniated Express API server template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvilers/express-api-template.git"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "template"
+  ],
+  "author": "Fabian Vilers <fabian.vilers@dev-one.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fvilers/express-api-template/issues"
+  },
+  "homepage": "https://github.com/fvilers/express-api-template#readme"
+}
