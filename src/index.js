@@ -17,7 +17,7 @@ app.use(compression());
 app.use(helmet());
 app.use(bodyParser.json(configuration.json));
 app.use(bodyParser.urlencoded(configuration.urlencoded));
-app.use(morgan(configuration.morgan.format, { skip: () => configuration.morgan.skip }));
+app.use(morgan(configuration.morgan.format, morgan.options));
 app.use('*', (req, res) => res.sendStatus(404));
 app.use(errorHandler());
 

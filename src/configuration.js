@@ -10,7 +10,9 @@ const configuration = {
   },
   morgan: {
     format: process.env.MORGAN_FORMAT || 'dev',
-    skip: process.env.MORGAN_SKIP || false
+    options: {
+      skip: () => process.env.MORGAN_SKIP === 'true' || false
+    }
   },
   urlencoded: {
     extended: false
