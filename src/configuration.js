@@ -6,7 +6,7 @@ const configuration = {
   },
   debug: 'api:server',
   json: {
-    limit: process.env.JSON_LIMIT || '25mb'
+    limit: process.env.JSON_LIMIT || '2mb'
   },
   morgan: {
     format: process.env.MORGAN_FORMAT || 'dev',
